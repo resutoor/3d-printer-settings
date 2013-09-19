@@ -5,7 +5,7 @@ set last_temperature 210.0
 button 0 "PSU ON" M80
 button 1 "PSU OFF" M81
 button 2 "FAN ON" M106 S255
-set last_file_path /home/hacklabjkl/incoming
+set last_file_path /home/hacklabjkl/Downloads
 button 3 "FAN OFF" M106 S0
 set xy_feedrate 30000
 set z_feedrate 16000
@@ -32,3 +32,4 @@ macro Z_AutoCalib
   G92 E0
   G29
 
+button 9 "Z10" G0 Z10 X0 Y0 F10000
