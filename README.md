@@ -10,7 +10,8 @@ cd ~
 git clone https://github.com/resutoor/3d-printer-settings.git
 for ii in 3d-printer-settings/.????*
 do
-  mv $ii $ii.old
-  ln -sf 3d-printer-settings/$ii $ii
+  iib=$(basename $ii)
+  test -e $iib || mv $iib $iib.old
+  ln -sf $ii $iib
 done
 ```
